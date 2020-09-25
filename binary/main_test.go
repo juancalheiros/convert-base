@@ -8,70 +8,70 @@ import (
 
 func TestDividerNumber1(t *testing.T) {
 	assert := assert.New(t)
-	numberToDivider := 8
+	divider := 8
 
-	resp := dividerNumber(numberToDivider)
+	resp := dividerNumber(divider)
 	expected := 4
 	assert.Equal(resp, expected, "must be divider number 8 for 2 should return 4")
 }
 
 func TestDividerNumber2(t *testing.T) {
 	assert := assert.New(t)
-	numberToDivider := 10
+	divider := 10
 
-	resp := dividerNumber(numberToDivider)
+	resp := dividerNumber(divider)
 	expected := 5
 	assert.Equal(resp, expected, "must be divider number 10 for 2 should return 5")
 }
 func TestDividerNumber3(t *testing.T) {
 	assert := assert.New(t)
-	numberToDivider := 2
+	divider := 2
 
-	resp := dividerNumber(numberToDivider)
+	resp := dividerNumber(divider)
 	expected := 1
 	assert.Equal(resp, expected, "must be divider number 2 for 2 should return 1")
 }
 
 func TestDividerNumber4(t *testing.T) {
 	assert := assert.New(t)
-	numberToDivider := 100
+	divider := 100
 
-	resp := dividerNumber(numberToDivider)
+	resp := dividerNumber(divider)
 	expected := 50
 	assert.Equal(resp, expected, "must be divider number 100 for 2 should return 50")
 }
 
 func TestRestOfTheDivision1(t *testing.T) {
 	assert := assert.New(t)
-	numberToForRestDivision := 100
+	divider := 100
 
-	resp := restOfTheDivision(numberToForRestDivision)
+	resp := restOfTheDivision(divider)
 	expected := 0
 	assert.Equal(resp, expected, "must be rest of the division 100 for 2 should return 0")
 }
 
 func TestRestOfTheDivision2(t *testing.T) {
 	assert := assert.New(t)
-	numberToForRestDivision := 5
+	divider := 5
 
-	resp := restOfTheDivision(numberToForRestDivision)
+	resp := restOfTheDivision(divider)
 	expected := 1
 	assert.Equal(resp, expected, "must be rest of the division 5 for 2 should return 1")
 }
 func TestRestOfTheDivision3(t *testing.T) {
 	assert := assert.New(t)
-	numberToForRestDivision := 25
+	divider := 25
 
-	resp := restOfTheDivision(numberToForRestDivision)
+	resp := restOfTheDivision(divider)
 	expected := 1
 	assert.Equal(resp, expected, "must be rest of the division 25 for 2 should return 1")
 }
 
 func TestRestOfTheDivision4(t *testing.T) {
 	assert := assert.New(t)
-	numberToForRestDivision := 2
+	divider := 2
 
-	resp := restOfTheDivision(numberToForRestDivision)
+	resp := restOfTheDivision(divider)
 	expected := 0
 	assert.Equal(resp, expected, "must be rest of the division 2 for 2 should return 0")
 }
@@ -114,27 +114,36 @@ func TestReverseArray4(t *testing.T) {
 
 func TestBinary1(t *testing.T) {
 	assert := assert.New(t)
-	number := 2
+	numberToConvertBinary := 2
 
-	resp := binary(number)
+	resp := binary(numberToConvertBinary)
 	expected := []int{1, 0}
 	assert.Equal(resp, expected, "must be number 2 should converte to value binary for [1,0]")
 }
 
 func TestBinary2(t *testing.T) {
 	assert := assert.New(t)
-	number := 8
+	numberToConvertBinary := 4
 
-	resp := binary(number)
+	resp := binary(numberToConvertBinary)
 	expected := []int{1, 0, 0}
-	assert.Equal(resp, expected, "must be number 8 should converte to value binary for [1,0,0]")
+	assert.Equal(resp, expected, "must be number 4 should converte to value binary for [1,0,0]")
 }
 
 func TestBinary3(t *testing.T) {
 	assert := assert.New(t)
-	number := 10
+	numberToConvertBinary := 10
 
-	resp := binary(number)
+	resp := binary(numberToConvertBinary)
 	expected := []int{1, 0, 1, 0}
 	assert.Equal(resp, expected, "must be number 10 should converte to value binary for [1,0,1,0]")
+}
+
+func TestBinary4(t *testing.T) {
+	assert := assert.New(t)
+	numberToConvertBinary := 15
+
+	resp := binary(numberToConvertBinary)
+	expected := []int{1, 1, 1, 1}
+	assert.Equal(resp, expected, "must be number 15 should converte to value binary for [1,1,1,1]")
 }

@@ -1,11 +1,11 @@
 package dojo
 
-func dividerNumber(number int) int {
-	return number / 2
+func dividerNumber(divider int) int {
+	return divider / 2
 }
 
-func restOfTheDivision(number int) int {
-	return number % 2
+func restOfTheDivision(divider int) int {
+	return divider % 2
 }
 
 func reverseArray(arr []int) []int {
@@ -22,27 +22,21 @@ func reverseArray(arr []int) []int {
 	return arr
 }
 
-func binary(number int) []int {
-	resp := []int{}
+func binary(numberToConvertBinary int) []int {
+	numberBinary := []int{}
 
 	for {
-		dividend := dividerNumber(number)
-		rest := restOfTheDivision(number)
-		resp = append(resp, rest)
+		dividend := dividerNumber(numberToConvertBinary)
+		rest := restOfTheDivision(numberToConvertBinary)
+		numberBinary = append(numberBinary, rest)
+		numberToConvertBinary = dividend
 
 		if dividend < 2 {
-			resp = append(resp, dividend)
+			numberBinary = append(numberBinary, dividend)
 			break
 		}
 	}
 
-	resp = reverseArray(resp)
-	return resp
-	// if number == 10 {
-	// 	return []int{1, 0, 1, 0}
-	// }
-	// if number == 8 {
-	// 	return []int{1, 0, 0}
-	// }
-	// return []int{1, 0}
+	numberBinary = reverseArray(numberBinary)
+	return numberBinary
 }
